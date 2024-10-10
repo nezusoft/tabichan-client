@@ -9,7 +9,7 @@ import {
 import { useState } from "react";
 import axios from "axios";
 
-export default function Signup() {
+export default function SignupScreen() {
   const [username, onChangeUsername] = useState<string>("");
   const [password, onChangePassword] = useState<string>("");
   const [email, onChangeEmail] = useState<string>("");

@@ -12,11 +12,12 @@ export default function TabLayout() {
     <Tabs
       screenOptions={{
         tabBarActiveTintColor: Colors[colorScheme ?? "light"].tint,
+        tabBarStyle: { backgroundColor: Colors[colorScheme ?? 'light'].background },
         headerShown: false,
       }}
     >
       <Tabs.Screen
-        name="index"
+        name="HomeScreen"
         options={{
           title: "Home",
           tabBarIcon: ({ color, focused }) => (
@@ -28,9 +29,21 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="signup"
+        name="SignupScreen"
         options={{
           title: "Signup",
+          tabBarIcon: ({ color, focused }) => (
+            <TabBarIcon
+              name={focused ? "code-slash" : "code-slash-outline"}
+              color={color}
+            />
+          ),
+        }}
+      />
+      <Tabs.Screen
+        name="LoginScreen"
+        options={{
+          title: "Login",
           tabBarIcon: ({ color, focused }) => (
             <TabBarIcon
               name={focused ? "code-slash" : "code-slash-outline"}
